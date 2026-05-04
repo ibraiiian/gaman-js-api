@@ -1,0 +1,21 @@
+{
+  "name": "api-project",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "KAME_CLI=true bun --watch src/index.ts",
+    "build": "bun build --outfile=./dist/server.js ./src/index.ts --external bun --production",
+    "start": "bun dist/server.js"
+  },
+  "dependencies": {
+    "@gaman/kame": "^0.1.0",
+    "gaman": "^2.1.4"
+  }
+}
